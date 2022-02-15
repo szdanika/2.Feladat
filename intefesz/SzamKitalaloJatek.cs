@@ -48,6 +48,13 @@ namespace intefesz
                 {
                     Console.WriteLine("Nem nyert");
                     (a as GepiJatekos).Veszitett();
+                    if(a is IOkostippelo)
+                    {// hogy ha megvalositja az interface-t
+                        if ((a as LogaritmikusKereso).ElozoTipp < cel)
+                            (a as LogaritmikusKereso).Kisebb();
+                        if ((a as LogaritmikusKereso).ElozoTipp > cel)
+                            (a as LogaritmikusKereso).Nagyobb();
+                    }
                 }
 
             }
