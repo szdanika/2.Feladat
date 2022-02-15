@@ -12,7 +12,9 @@ namespace intefesz
             VeletlenTippelo vt = new VeletlenTippelo();
             szkj.VersenyzoFelvetele(vt);
             szkj.VersenyIndul();
-            while(szkj.MindenkiTippel() == true)
+            bool temp = false;
+            while (temp == false)
+                temp = szkj.MindenkiTippel();
             ;
         }
         static void Main(string[] args)

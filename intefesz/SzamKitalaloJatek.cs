@@ -42,9 +42,11 @@ namespace intefesz
                 {
                     nyertesek++;
                     (a as GepiJatekos).Nyert();
+                    Console.WriteLine("NYERTEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEem");
                 }
                 else
                 {
+                    Console.WriteLine("Nem nyert");
                     (a as GepiJatekos).Veszitett();
                 }
 
