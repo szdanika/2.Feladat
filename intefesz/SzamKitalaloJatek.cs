@@ -9,7 +9,7 @@ namespace intefesz
     internal class SzamKitalaloJatek
     {
         Random rnd = new Random();
-        const int MAX_VERSENYZO = 2;
+        const int MAX_VERSENYZO = 1; 
         ITippelo[] versenyzok = new GepiJatekos[MAX_VERSENYZO];
         int versenyzokN = 0;
         public void VersenyzoFelvetele(ITippelo versenyzo)
@@ -30,6 +30,7 @@ namespace intefesz
         }
         public bool MindenkiTippel()
         {
+            Console.WriteLine("cel :" + cel);
             //w ha egynél több ember nyer akkor mindenki nyer
             //Ha min 1 ember nyer akkor mindenki aki nem találta el az veszít
             int nyertesek =0 ;
@@ -37,7 +38,7 @@ namespace intefesz
             {
                 nyertesek = 0;
                 int tip = a.KovetkezoTipp();
-                Console.WriteLine("igen tip : " + tip);
+                Console.WriteLine(a.GetType() +" igen tip : " + tip);
                 if (tip == cel)
                 {
                     nyertesek++;

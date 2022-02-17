@@ -12,16 +12,19 @@ namespace intefesz
         public override int KovetkezoTipp()
         {
             elozoTipp = center;
+            if (center == 0)
+                elozoTipp = (alsoHatar + felsoHatar) / 2;
             center = (alsoHatar + felsoHatar) / 2;
+            Console.WriteLine("also :" + alsoHatar + " felso :" + felsoHatar);
             return center;
         }
         public void Kisebb()
         {
-            felsoHatar = elozoTipp; // at álitani az előző tippre
+            alsoHatar = elozoTipp; // at álitani az előző tippre
         }
         public void Nagyobb()
         {
-            alsoHatar = elozoTipp; // át álítani az előző tippre
+            felsoHatar = elozoTipp; // át álítani az előző tippre
         }
     }
 }
