@@ -30,6 +30,17 @@ namespace intefesz
                 temp = szkj.MindenkiTippel();
             ;
         }
+        public static void test3()
+        {//emberteszt
+            EmberiJatekos ember = new EmberiJatekos();
+            SzamKitalaloJatek szkj = new SzamKitalaloJatek();
+            szkj.VersenyzoFelvetele(ember);
+            szkj.VersenyIndul();
+            bool temp = false;
+            while (temp == false)
+                temp = szkj.MindenkiTippel();
+
+        }
         static void Main(string[] args)
         {
             test2();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace intefesz
 {
-    internal class EmberiJatekos : IOkostippelo
+    internal class EmberiJatekos : IOkostippelo, ITippelo
     {
         public void JatekIndul(int alhat, int felsohat)
         {
@@ -21,9 +21,17 @@ namespace intefesz
             Console.WriteLine("Az előző tippnél nagyobb a keresett szám");
         }
         public int KovetkezoTipp()
-        {
-            Console.WriteLine("Kérem a következő tippet :");
+        { // megcsinálni hogy kék legyen
+            Console.Write("*Kérem a következő tippet :");
             return Convert.ToInt32(Console.ReadLine());
+        }
+        public void Nyert()
+        {
+            Console.WriteLine("Nyertél");
+        }
+        public void Veszitett()
+        {
+            Console.WriteLine("Veszítettél");
         }
     }
 }

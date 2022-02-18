@@ -10,5 +10,6 @@ namespace intefesz
     {
         void JatekIndul(int alsoHatar, int FelsoHatar);
         int KovetkezoTipp();
+        void Veszitett();
     }
 }

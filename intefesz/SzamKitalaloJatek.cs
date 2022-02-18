@@ -10,8 +10,9 @@ namespace intefesz
     {
         Random rnd = new Random();
         const int MAX_VERSENYZO = 1; 
-        ITippelo[] versenyzok = new GepiJatekos[MAX_VERSENYZO];
+        ITippelo[] versenyzok = new ITippelo[MAX_VERSENYZO];
         int versenyzokN = 0;
+
         public void VersenyzoFelvetele(ITippelo versenyzo)
         {
             versenyzok[versenyzokN] = versenyzo;
@@ -48,13 +49,18 @@ namespace intefesz
                 else
                 {
                     Console.WriteLine("Nem nyert");
-                    (a as GepiJatekos).Veszitett();
+                    //(a as GepiJatekos).Veszitett(); 
+                    a.Veszitett();
                     if(a is IOkostippelo)
                     {// hogy ha megvalositja az interface-t
-                        if ((a as LogaritmikusKereso).ElozoTipp < cel)
-                            (a as LogaritmikusKereso).Kisebb();
-                        if ((a as LogaritmikusKereso).ElozoTipp > cel)
-                            (a as LogaritmikusKereso).Nagyobb();
+                        /* if ((a as LogaritmikusKereso).ElozoTipp < cel)
+                             (a as LogaritmikusKereso).Kisebb();
+                         if ((a as LogaritmikusKereso).ElozoTipp > cel)
+                             (a as LogaritmikusKereso).Nagyobb();*/
+                        if (tip < cel)
+                            (a as IOkostippelo).Kisebb();
+                        if(tip > cel)
+                            (a as IOkostippelo).Nagyobb();
                     }
                 }
 
