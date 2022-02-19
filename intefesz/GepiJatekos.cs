@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace intefesz
 {
-    abstract class GepiJatekos : ITippelo
+    abstract class GepiJatekos : ITippelo, IStatisztikatSzolgaltat
     {
         public int ElozoTipp { get => elozoTipp; }
         protected int alsoHatar, felsoHatar;
@@ -26,5 +26,13 @@ namespace intefesz
             veszitettDB++;
         }
         abstract public int KovetkezoTipp();
+        public int HanyszorNyert()
+        {
+            return nyertDB;
+        }
+        public int HanyszorVesztett()
+        {
+            return veszitettDB;
+        }
     }
 }

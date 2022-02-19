@@ -41,9 +41,36 @@ namespace intefesz
                 temp = szkj.MindenkiTippel();
 
         }
+        public static void test4()
+        {
+            SzamKitalaloJatek szkj = new SzamKitalaloJatek();
+            BejaroTippelo bj = new BejaroTippelo();
+            szkj.VersenyzoFelvetele(bj);
+            VeletlenTippelo ve = new VeletlenTippelo();
+            szkj.VersenyzoFelvetele(ve);
+            LogaritmikusKereso lgk = new LogaritmikusKereso();
+            szkj.VersenyzoFelvetele(lgk);
+            szkj.Statisztika(1000);
+        }
+        public static void test5()
+        {
+            SzamKitalaloJatek szkj = new SzamKitalaloJatek();
+            BejaroTippelo bj = new BejaroTippelo();
+            szkj.VersenyzoFelvetele(bj);
+            VeletlenTippelo ve = new VeletlenTippelo();
+            szkj.VersenyzoFelvetele(ve);
+            LogaritmikusKereso lgk = new LogaritmikusKereso();
+            szkj.VersenyzoFelvetele(lgk);
+            szkj.Statisztika(1000);
+            SzamKitalaloJatekKaszino szkjk = new SzamKitalaloJatekKaszino(10, 20, 1000);
+            szkjk.VersenyzoFelvetele(bj);
+            szkjk.VersenyzoFelvetele(ve);
+            szkjk.VersenyzoFelvetele(lgk);
+            szkjk.Jatek();
+        }
         static void Main(string[] args)
         {
-            test2();
+            test5();
         }
     }
 }

@@ -15,7 +15,7 @@ namespace intefesz
             if (center == 0)
                 elozoTipp = (alsoHatar + felsoHatar) / 2;
             center = (alsoHatar + felsoHatar) / 2;
-            Console.WriteLine("also :" + alsoHatar + " felso :" + felsoHatar);
+            //Console.WriteLine("also :" + alsoHatar + " felso :" + felsoHatar);
             return center;
         }
         public void Kisebb()

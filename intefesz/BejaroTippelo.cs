@@ -8,10 +8,11 @@ namespace intefesz
 {
     internal class BejaroTippelo : GepiJatekos
     {
-        protected int aktualis = 10;
+        protected int aktualis;
         public override void JatekIndul(int ahatar, int felhatar)
         {
             base.JatekIndul(aktualis,felhatar);
+            aktualis = ahatar;
         }
         public override int KovetkezoTipp()
         {
